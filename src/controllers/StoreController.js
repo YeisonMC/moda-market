@@ -58,7 +58,7 @@ export const createStore = async (req, res) => {
   }
 };
 
-export const getStoreName = async (req, res) => {
+export const getStorePorId = async (req, res) => {
   try {
     //TODO: EL PARAMS AYUDA A OBTENER EL OBJETO QUE SE BUSCA
     // console.log(req.params.id);
@@ -66,7 +66,7 @@ export const getStoreName = async (req, res) => {
     //? AQUI LA CONSULTA PUDE CAMBIAR SEGUN LO QUE SE REQUIERA, EN MI CASO PUSE POR NOMBRE Y FUNCIONA BIEN
 
     const [rows] = await poolConection.query(
-      "SELECT * FROM products WHERE nombre = ?",
+      "SELECT * FROM products WHERE id = ?",
       [req.params.id]
     );
 

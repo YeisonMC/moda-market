@@ -3,7 +3,7 @@ import {
   storeHomeAll,
   createStore,
   updataStore,
-  getStoreName,
+  getStorePorId,
   deleteStore,
 } from "../controllers/StoreController.js";
 
@@ -11,7 +11,7 @@ import {
 
 const router = Router();
 router.get("/store/home", storeHomeAll);
-router.get("/store/home/get/:id", getStoreName);
+router.get("/store/home/get/:id", getStorePorId);
 router.post("/store/create", createStore);
 
 //TODO SI SE ACTUALIZA TODO EL CUERPO ES MEJOR UTILZIAR PUT PERO SI SOLO SE QUIERE ACTUALIZAR 1 O 2 CAMPOS ES MEJOR PATCH

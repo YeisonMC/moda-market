@@ -75,8 +75,9 @@ export const getStorePorId = async (req, res) => {
 
     //TODO: SE PUEDE PONER 0 PARA QUE SOLO ARROJE UN SOLO RESULTADO PERO SI QUIERES TODOS LOS DATOS SOLO DEJALO CON ROWS
 
-    // res.json(rows[0]);
-    res.json(rows);
+    res.json(rows[0]);
+
+    // res.json(rows);
     // console.log(rows);
   } catch (error) {
     return res

@@ -6,6 +6,7 @@ import {
   getStorePorId,
   deleteStore,
 } from "../controllers/StoreController.js";
+import { login } from "../controllers/StoreLogin.js";
 
 // ?IMPORTAMOS ROUTER DE EXPRESS Y YA NO SE MAPEA LAS RUTAS CON APP
 
@@ -17,5 +18,8 @@ router.post("/store/create", createStore);
 //TODO SI SE ACTUALIZA TODO EL CUERPO ES MEJOR UTILZIAR PUT PERO SI SOLO SE QUIERE ACTUALIZAR 1 O 2 CAMPOS ES MEJOR PATCH
 router.put("/store/edit/:id", updataStore);
 router.delete("/store/delete/:id", deleteStore);
+
+//TODO LOGIN
+router.post("/store/login", login);
 
 export default router;

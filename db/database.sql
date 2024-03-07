@@ -14,6 +14,15 @@ imagen varchar(100) not null,
 categoria varchar (50) not null
 );
 
+CREATE TABLE users (
+id INT AUTO_INCREMENT PRIMARY KEY,
+first_name VARCHAR(50) NOT NULL,
+last_name VARCHAR(100) NOT NULL,
+phone_number VARCHAR(12) NOT NULL,
+email_user VARCHAR(100) NOT NULL UNIQUE,
+password_user VARCHAR(50) NOT NULL
+);
+
 INSERT INTO products (nombre, descripcion, marca, precio, promociones, talla, color, imagen, categoria) 
 VALUES ('Camiseta', 'Camiseta de algodón con estampado floral', 'Zara', 25.99, 0, 'M', 'Blanco', 'https://static.owayo-cdn.com/newhp/img/productSelection/st2020_whi_250x281.png', 'Camisetas');
 
